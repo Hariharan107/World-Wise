@@ -35,6 +35,78 @@
         "lng": -3.7133789062500004
       },
       "id": 17806751
+    },
+    {
+      "cityName": "Ugena",
+      "countryName": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-06-29T10:55:32.384Z",
+      "notes": "great\n",
+      "position": {
+        "lat": "40.165456155469116",
+        "lng": "-3.8680460099817258"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Pouligny-Notre-Dame",
+      "countryName": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-06-29T10:59:49.646Z",
+      "notes": "Best place",
+      "position": {
+        "lat": "46.45331170319812",
+        "lng": "2.0214843750000004"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Rouilly-Saint-Loup",
+      "countryName": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-06-29T11:01:49.799Z",
+      "notes": "best",
+      "position": {
+        "lat": "48.26894591355645",
+        "lng": "4.163818359375001"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Erpeldange",
+      "countryName": "Luxembourg",
+      "emoji": "🇱🇺",
+      "date": "2023-06-29T11:02:42.678Z",
+      "notes": "Great",
+      "position": {
+        "lat": "49.859413035573894",
+        "lng": "6.119384765625"
+      },
+      "id": 98443201
+    },
+    {
+      "cityName": "Westward",
+      "countryName": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "emoji": "🇬🇧",
+      "date": "2023-06-29T11:05:10.672Z",
+      "notes": "Best Place",
+      "position": {
+        "lat": "54.813593063731076",
+        "lng": "-3.1201171875"
+      },
+      "id": 98443202
+    },
+    {
+      "cityName": "British Crown Dependencies",
+      "countryName": "Isle of Man",
+      "emoji": "🇮🇲",
+      "date": "2023-06-29T11:06:22.944Z",
+      "notes": "Best",
+      "position": {
+        "lat": "54.11218733555352",
+        "lng": "-4.504394531250001"
+      },
+      "id": 98443203
     }
   ]
 }

@@ -31,10 +31,29 @@ const CitiesProvider = ({ children }) => {
       setLoading(false);
     }
   };
+  const addNewCity = async (newCity) => {
+    try {
+      setLoading(true);
+      const res = await fetch("http://localhost:3001/cities", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newCity),
+      });
+      const data = await res.json();
+      setCities((cities) => [...cities, data]);
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setLoading(false);
+    }
+  };
   const contextValue = {
     cities,
     loading,
     currentCity,
+    addNewCity,
     getCity,
   };
   return (
