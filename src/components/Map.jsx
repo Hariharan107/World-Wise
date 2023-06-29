@@ -10,14 +10,13 @@ import {
 } from "react-leaflet";
 import styles from "./Map.module.css";
 import Button from "./Button";
-import { useSearchParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useGeolocation } from "../hooks/useGeoLocation";
+import { useUrlPosition } from "../hooks/useUrlPosition";
 const Map = () => {
-  const [position, setPosition] = useState([450, 424]);
-  const [searchParams] = useSearchParams();
+  const [position, setPosition] = useState([40, 0]);
   const { cities } = useCities();
-  const mapLat = searchParams.get("lat");
-  const mapLng = searchParams.get("lng");
+  const [latitude, longitude] = useUrlPosition();
   const {
     isLoading: PositionLoading,
     position: myPosition,
@@ -29,10 +28,11 @@ const Map = () => {
     }
   }, [myPosition]);
   useEffect(() => {
-    if (mapLat && mapLng) {
-      setPosition([mapLat, mapLng]);
+    if (latitude && longitude) {
+      setPosition([latitude, longitude]);
     }
-  }, [mapLat, mapLng]);
+  }, [latitude, longitude]);
+
   return (
     <div className={styles.mapContainer}>
       {!myPosition && (
@@ -68,7 +68,7 @@ const Map = () => {
 };
 const ChangePosition = ({ position }) => {
   useMap().setView(position, 6);
-  return null;
+  return null; // No JSX to render
 };
 const DetectClick = () => {
   const navigate = useNavigate();
