@@ -29,7 +29,7 @@ const AuthProvider = ({ children }) => {
   const { user, isAuthenticated } = state;
   const login = (email, password) => {
     if (email === FAKE_USER.email && password === FAKE_USER.password) {
-      dispatch({ type: "LOGIN", user: FAKE_USER });
+      dispatch({ type: "LOGIN", payload: FAKE_USER });
     }
   };
   const logout = () => {
@@ -37,7 +37,7 @@ const AuthProvider = ({ children }) => {
   };
   const contextValues = { user, isAuthenticated, login, logout };
   return (
-    <AuthContext.Provider values={contextValues}>
+    <AuthContext.Provider value={contextValues}>
       {children}
     </AuthContext.Provider>
   );
